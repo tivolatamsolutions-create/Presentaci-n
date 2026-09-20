@@ -467,6 +467,364 @@ html, body {
   }
 }
 
+
+/* =========================================================
+   TIVO — ADAPTACIÓN RESPONSIVE PARA CELULAR
+   ========================================================= */
+@media (max-width: 800px){
+  html, body{
+    width:100%;
+    min-width:0;
+    height:100%;
+    overflow:hidden;
+    background:#fff !important;
+  }
+
+  .deck{
+    width:100%;
+    height:100dvh;
+    min-height:100svh;
+  }
+
+  .slide{
+    width:100%;
+    min-height:100dvh;
+    height:100dvh;
+    padding:28px 20px 72px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .slide::-webkit-scrollbar{display:none}
+
+  .topline{
+    gap:12px;
+    align-items:flex-start;
+  }
+
+  .section-number,
+  .kicker,
+  .audience-kicker{
+    font-size:9px !important;
+    line-height:1.25;
+    letter-spacing:.14em;
+  }
+
+  h1{
+    font-size:clamp(42px,11vw,70px);
+    line-height:.96;
+    letter-spacing:-.055em;
+  }
+
+  h2{
+    font-size:clamp(34px,9.2vw,56px);
+    line-height:.98;
+    letter-spacing:-.05em;
+  }
+
+  h3{
+    font-size:22px;
+  }
+
+  p{
+    font-size:15px;
+    line-height:1.45;
+  }
+
+  .nav{
+    bottom:10px;
+    width:max-content;
+    max-width:calc(100vw - 24px);
+    padding:5px 8px;
+    gap:4px;
+    border-radius:24px;
+  }
+  .nav button{
+    width:30px;
+    height:30px;
+    font-size:14px;
+  }
+  .dots{
+    gap:3px;
+    margin:0 5px;
+    max-width:120px;
+    overflow:hidden;
+  }
+  .dot{
+    width:4px;
+    height:4px;
+    flex:0 0 auto;
+  }
+  .dot.active{
+    width:16px;
+  }
+  .counter{
+    min-width:31px;
+    font-size:10px;
+  }
+
+  .controls-hint{
+    display:none !important;
+  }
+
+  /* Portada */
+  .cover{
+    padding:28px 20px 70px;
+  }
+  .cover .logo{
+    width:min(145px,38vw);
+  }
+  .cover .content{
+    width:100%;
+  }
+  .cover h1{
+    margin-top:20px;
+  }
+  .cover .subtitle{
+    font-size:15px !important;
+  }
+  .cover .gradient-line{
+    width:125px;
+    height:4px;
+    margin:20px auto;
+  }
+  .orb{
+    opacity:.55;
+  }
+  .orb.one{
+    width:130px !important;
+    height:130px !important;
+  }
+  .orb.two{
+    width:90px !important;
+    height:90px !important;
+  }
+
+  /* Slide 3 — áreas */
+  .audience-visual-slide{
+    padding:24px 16px 72px;
+  }
+  .audience-head{
+    margin-bottom:20px !important;
+  }
+  .audience-title{
+    font-size:clamp(30px,8.5vw,48px) !important;
+    line-height:1.02 !important;
+    letter-spacing:-.045em !important;
+  }
+  .audience-title br{
+    display:none;
+  }
+  .audience-panels{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+  .audience-panel{
+    min-height:0 !important;
+    grid-template-columns:42% 58% !important;
+  }
+  .panel-visual{
+    min-height:190px !important;
+  }
+  .panel-copy{
+    padding:20px 18px !important;
+  }
+  .panel-copy h3{
+    font-size:23px !important;
+  }
+  .panel-copy p{
+    font-size:13px !important;
+    margin-bottom:12px !important;
+  }
+  .service-grid{
+    gap:7px 10px !important;
+  }
+  .service-grid span{
+    font-size:11px !important;
+  }
+  .audience-footer{
+    margin:16px auto 0 !important;
+    width:100%;
+    max-width:100%;
+    padding:13px 16px !important;
+    font-size:13px !important;
+    text-align:center;
+  }
+
+  /* Slide 4 — logos */
+  .trusted-grid{
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:10px !important;
+  }
+  .trusted-card{
+    min-height:95px !important;
+    padding:12px !important;
+  }
+  .trusted-card img{
+    max-width:85%;
+    max-height:55px;
+  }
+
+  /* Slides de contenido */
+  .content-grid,
+  .two-col,
+  .stats-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .card{
+    padding:20px !important;
+  }
+
+  /* Slide 6 */
+  .portfolio-visual-slide{
+    padding:25px 16px 72px !important;
+  }
+  .portfolio-header{
+    display:block !important;
+    margin-bottom:18px !important;
+  }
+  .portfolio-header h2{
+    font-size:clamp(36px,9.5vw,58px) !important;
+  }
+  .portfolio-header p{
+    margin:12px 0 0 !important;
+    font-size:13px !important;
+  }
+  .portfolio-grid{
+    grid-template-columns:1fr !important;
+    grid-template-rows:none !important;
+    height:auto !important;
+    min-height:0 !important;
+    gap:12px !important;
+  }
+  .portfolio-card{
+    min-height:250px !important;
+  }
+
+  /* Slide 7 — fotos reales */
+  .portfolio-photo-slide{
+    padding:25px 16px 72px !important;
+  }
+  .portfolio-photo-head{
+    display:block !important;
+    margin-bottom:18px !important;
+  }
+  .portfolio-photo-head h2{
+    font-size:clamp(36px,9.5vw,58px) !important;
+  }
+  .portfolio-photo-head p{
+    margin-top:10px !important;
+    font-size:13px !important;
+  }
+  .real-photo-grid{
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:8px !important;
+    height:auto !important;
+  }
+  .real-photo{
+    height:150px !important;
+    border-radius:14px !important;
+  }
+
+  /* Slide 10 — CTA */
+  .cta-slide{
+    padding:28px 20px 72px !important;
+  }
+  .cta-center{
+    min-height:calc(100dvh - 100px) !important;
+    height:auto !important;
+    padding:55px 0 35px !important;
+    justify-content:center !important;
+  }
+  .cta-center h2{
+    font-size:clamp(42px,10.5vw,68px) !important;
+    line-height:.98 !important;
+  }
+  .cta-center h2 br{
+    display:none;
+  }
+  .cta-subtitle{
+    font-size:17px !important;
+    margin-top:22px !important;
+  }
+  .cta-body{
+    font-size:14px !important;
+    margin-top:7px !important;
+  }
+  .cta-pillars{
+    flex-direction:column !important;
+    gap:15px !important;
+    margin-top:30px !important;
+  }
+  .cta-pillar{
+    min-width:0 !important;
+  }
+  .pillar-divider{
+    width:100px !important;
+    height:1px !important;
+  }
+  .pillar-icon{
+    width:34px !important;
+    height:34px !important;
+  }
+
+  /* Slide final */
+  .final{
+    padding:30px 20px 72px !important;
+  }
+  .final .logo{
+    width:min(180px,55vw) !important;
+    margin-bottom:22px !important;
+  }
+  .final h2{
+    font-size:clamp(38px,10vw,62px) !important;
+  }
+  .final-contact{
+    position:static !important;
+    transform:none !important;
+    margin-top:28px !important;
+    flex-direction:column !important;
+    gap:15px !important;
+  }
+  .contact-item{
+    font-size:14px !important;
+  }
+
+  /* Evita que adornos corten el contenido en pantallas pequeñas */
+  .audience-corner,
+  .decorative-orb{
+    opacity:.45;
+  }
+}
+
+@media (max-width:420px){
+  .slide{
+    padding-left:15px;
+    padding-right:15px;
+  }
+
+  .audience-panel{
+    grid-template-columns:1fr !important;
+  }
+  .panel-visual{
+    min-height:175px !important;
+    max-height:205px !important;
+  }
+
+  .real-photo-grid{
+    grid-template-columns:1fr 1fr !important;
+  }
+  .real-photo{
+    height:125px !important;
+  }
+
+  .nav{
+    max-width:calc(100vw - 16px);
+  }
+}
+
 </style>
 </head>
 <body>
